@@ -20,19 +20,37 @@ public class SecondActivityTest extends TestCase {
 		super.tearDown();
 	}
 
-	//Example ->
 	@Test
 	public void testGetSumPositiveValue() {
-		assertEquals(15, (theCalculator.getSum(5, 10)));
-		assertEquals(15, (theCalculator.getSum(10, 5)));
+		assertEquals(15, (theCalculator.sum(5, 10)));
+		assertEquals(15, (theCalculator.sum(10, 5)));
 	}
 
-	//Example ->
 	@Test
 	public void testGetSumNegativeValue() {
-		assertEquals(5, (theCalculator.getSum(-5, 10)));
-		assertEquals(-5, (theCalculator.getSum(5, -10)));
+		assertEquals(5, (theCalculator.sum(-5, 10)));
+		assertEquals(-5, (theCalculator.sum(5, -10)));
 	}
+	
+	@Test
+	public void testSubstract() {
+		assertEquals(-5, (theCalculator.substract(5, 10)));
+		assertEquals(5, (theCalculator.substract(10, 5)));
+	}
+	
+	@Test
+	public void testMultiply() {
+		assertEquals(50, (theCalculator.multiply(5, 10)));
+		assertEquals(50, (theCalculator.multiply(10, 5)));
+	}
+	
+	@Test
+	public void testDivide() {
+		assertEquals(5, (theCalculator.divide(50, 10)));
+		assertEquals(2, (theCalculator.divide(10, 5)));
+	}
+	
+	
 
 }
 
